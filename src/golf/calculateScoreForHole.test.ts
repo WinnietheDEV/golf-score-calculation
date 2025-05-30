@@ -72,4 +72,16 @@ describe("calculateScoreForHole", () => {
     //Assert
     expect(result).toBe(expected);
   });
+
+  it("คืนค่า 'Par can be greater than minPar atmost 3' ถ้า par เป็น 5; minPar เป็น 1; totalStroke เป็น 3", () => {
+    //Arrange
+    const par = 5;
+    const minPar = 1;
+    const totalStroke = 3;
+    const expected = "Par can be greater than minPar atmost 3";
+    //Act
+    const result = calculateScoreForHole({ par, minPar, totalStroke });
+    //Assert
+    expect(result).toBe(expected);
+  });
 });

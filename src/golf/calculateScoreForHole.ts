@@ -22,5 +22,9 @@ export function calculateScoreForHole({
     return "Total stroke must be greater than or equal to minPar";
   }
 
+  if (par - minPar > 3) {
+    return "Par can be greater than minPar atmost 3";
+  }
+
   return totalStroke - par;
 }
