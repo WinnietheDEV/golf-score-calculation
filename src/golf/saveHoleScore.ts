@@ -1,6 +1,4 @@
-import { SCORE_LABEL } from "./formatScore";
-
-interface HoleScore {
+export interface HoleScore {
   score: number;
   label: string;
 }
