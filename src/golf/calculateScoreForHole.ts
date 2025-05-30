@@ -9,7 +9,7 @@ export function calculateScoreForHole({
   par,
   minPar,
   totalStroke,
-}: HolePlayInfo) {
+}: HolePlayInfo): number | string {
   if (par <= minPar) {
     return "Par must be greater than minPar";
   }

@@ -1,3 +1,5 @@
+import { HoleScore } from "./saveHoleScore";
+
 export enum SCORE_LABEL {
   ALBATROSS = "Albatross",
   EAGLE = "Eagle",
@@ -10,13 +12,9 @@ export enum SCORE_LABEL {
   QUINTUPLE_BOGEY = "Quintuple Bogey",
 }
 
-export function formatHoleScore(holeScore: number) {
+export function formatHoleScore(holeScore: number): HoleScore | string {
   if (holeScore < -3) {
     return "Hole score must be greater than or equal to -3";
-  }
-
-  if (holeScore > 5) {
-    return { score: holeScore, label: holeScore.toString() };
   }
 
   switch (holeScore) {
@@ -39,6 +37,6 @@ export function formatHoleScore(holeScore: number) {
     case 5:
       return { score: 5, label: SCORE_LABEL.QUINTUPLE_BOGEY };
     default:
-      break;
+      return { score: holeScore, label: holeScore.toString() };
   }
 }
