@@ -1,7 +1,7 @@
 import { calculateScoreForHole } from "./calculateScoreForHole";
 
 describe("calculateScoreForHole", () => {
-  it("คืนค่า -1 ถ้า par เป็น 3; minPar เป็น 1; totalStroke เป็น 2", () => {
+  it("คืนค่า -1 เมื่อ par เป็น 3; minPar เป็น 1; totalStroke เป็น 2", () => {
     //Arrange
     const par = 3;
     const minPar = 1;
@@ -13,7 +13,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 2 ถ้า par เป็น 5; minPar เป็น 2; totalStroke เป็น 7", () => {
+  it("คืนค่า 2 เมื่อ par เป็น 5; minPar เป็น 2; totalStroke เป็น 7", () => {
     //Arrange
     const par = 5;
     const minPar = 2;
@@ -25,7 +25,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 0 ถ้า par เป็น 4; minPar เป็น 1; totalStroke เป็น 4", () => {
+  it("คืนค่า 0 เมื่อ par เป็น 4; minPar เป็น 1; totalStroke เป็น 4", () => {
     //Arrange
     const par = 4;
     const minPar = 1;
@@ -37,7 +37,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 'Par must be greater than minPar' ถ้า par เป็น 2; minPar เป็น 2; totalStroke เป็น 1", () => {
+  it("คืนค่า 'Par must be greater than minPar' เมื่อ par เป็น 2; minPar เป็น 2; totalStroke เป็น 1", () => {
     //Arrange
     const par = 2;
     const minPar = 2;
@@ -49,7 +49,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 'MinPar must be greater than 0' ถ้า par เป็น 3; minPar เป็น 0; totalStroke เป็น 2", () => {
+  it("คืนค่า 'MinPar must be greater than 0' เมื่อ par เป็น 3; minPar เป็น 0; totalStroke เป็น 2", () => {
     //Arrange
     const par = 3;
     const minPar = 0;
@@ -61,7 +61,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 'Total stroke must be greater than or equal to minPar' ถ้า par เป็น 5; minPar เป็น 3; totalStroke เป็น 2", () => {
+  it("คืนค่า 'Total stroke must be greater than or equal to minPar' เมื่อ par เป็น 5; minPar เป็น 3; totalStroke เป็น 2", () => {
     //Arrange
     const par = 5;
     const minPar = 3;
@@ -73,7 +73,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 'Par can be greater than minPar atmost 3' ถ้า par เป็น 5; minPar เป็น 1; totalStroke เป็น 3", () => {
+  it("คืนค่า 'Par can be greater than minPar atmost 3' เมื่อ par เป็น 5; minPar เป็น 1; totalStroke เป็น 3", () => {
     //Arrange
     const par = 5;
     const minPar = 1;
