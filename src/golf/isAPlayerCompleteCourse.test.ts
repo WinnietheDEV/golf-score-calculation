@@ -1,7 +1,7 @@
 import { isAPlayerCompleteCourse } from "./isAPlayerCompleteCourse";
 
 describe("isAPlayerCompleteGame", () => {
-  it("ควรคืนค่า true เมื่อ holesPlayed เป็น 5; totalholes เป็น 5", () => {
+  it("คืนค่า true เมื่อ holesPlayed เป็น 5; totalholes เป็น 5", () => {
     // Arrange
     const holesPlayed = 5;
     const totalHoles = 5;
@@ -12,7 +12,7 @@ describe("isAPlayerCompleteGame", () => {
     expect(result).toBe(expected);
   });
 
-  it("ควรคืนค่า false เมื่อ holesPlayed เป็น 2; totalholes เป็น 3", () => {
+  it("คืนค่า false เมื่อ holesPlayed เป็น 2; totalholes เป็น 3", () => {
     // Arrange
     const holesPlayed = 2;
     const totalHoles = 3;

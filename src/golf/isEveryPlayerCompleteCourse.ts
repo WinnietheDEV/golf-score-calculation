@@ -5,8 +5,7 @@ interface GameProgress {
 }
 // ค่า totalPlayers ได้มากจากการกำหนดคนเข้าร่วม
 // ค่า playersCompletedCourse ได้มาจากการนับผู้เล่นที่มี finalScore
-
-//รับ arguements เป็น object เพื่อไม่ให้เกิดความสับสนของลำดับการรับ arguement
+// รับ arguements เป็น object เพื่อไม่ให้เกิดความสับสนของลำดับการรับ arguement
 export function isEveryPlayerCompleteCourse({
   totalPlayers,
   playersCompletedCourse,
