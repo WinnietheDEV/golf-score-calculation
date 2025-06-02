@@ -19,23 +19,23 @@ export function formatHoleScore(holeScore: number): HoleScore | string {
 
   switch (holeScore) {
     case -3:
-      return { score: -3, label: SCORE_LABEL.ALBATROSS };
+      return { score: holeScore, label: SCORE_LABEL.ALBATROSS };
     case -2:
-      return { score: -2, label: SCORE_LABEL.EAGLE };
+      return { score: holeScore, label: SCORE_LABEL.EAGLE };
     case -1:
-      return { score: -1, label: SCORE_LABEL.BIRDIE };
+      return { score: holeScore, label: SCORE_LABEL.BIRDIE };
     case 0:
-      return { score: 0, label: SCORE_LABEL.PAR };
+      return { score: holeScore, label: SCORE_LABEL.PAR };
     case 1:
-      return { score: 1, label: SCORE_LABEL.BOGEY };
+      return { score: holeScore, label: SCORE_LABEL.BOGEY };
     case 2:
-      return { score: 2, label: SCORE_LABEL.DOUBLE_BOGEY };
+      return { score: holeScore, label: SCORE_LABEL.DOUBLE_BOGEY };
     case 3:
-      return { score: 3, label: SCORE_LABEL.TRIPLE_BOGEY };
+      return { score: holeScore, label: SCORE_LABEL.TRIPLE_BOGEY };
     case 4:
-      return { score: 4, label: SCORE_LABEL.QUADRUPLE_BOGEY };
+      return { score: holeScore, label: SCORE_LABEL.QUADRUPLE_BOGEY };
     case 5:
-      return { score: 5, label: SCORE_LABEL.QUINTUPLE_BOGEY };
+      return { score: holeScore, label: SCORE_LABEL.QUINTUPLE_BOGEY };
     default:
       return { score: holeScore, label: holeScore.toString() };
   }
