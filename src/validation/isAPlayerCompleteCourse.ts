@@ -11,11 +11,11 @@ export function isAPlayerCompleteCourse({
   totalHoles,
 }: PlayerCourseProgress): boolean | string {
   if (holesPlayed > totalHoles) {
-    return "Holes played must be less than or equal to totalHoles";
+    throw new Error("Holes played must be less than or equal to totalHoles");
   }
 
   if (holesPlayed < 1) {
-    return "Holes played must be greater than 0";
+    throw new Error("Holes played must be greater than 0");
   }
 
   return holesPlayed === totalHoles;

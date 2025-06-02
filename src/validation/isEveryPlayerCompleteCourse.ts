@@ -11,11 +11,13 @@ export function isEveryPlayerCompleteCourse({
   playersCompletedCourse,
 }: GameProgress) {
   if (totalPlayers <= 0) {
-    return "Total players must be greater than 0";
+    throw new Error("Total players must be greater than 0");
   }
 
   if (playersCompletedCourse > totalPlayers) {
-    return "Total players must be greater than or equal to players completed course";
+    throw new Error(
+      "Total players must be greater than or equal to players completed course"
+    );
   }
 
   return totalPlayers === playersCompletedCourse;

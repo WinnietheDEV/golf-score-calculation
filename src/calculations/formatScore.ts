@@ -1,6 +1,6 @@
 import { HoleScore } from "../storage/saveHoleScore";
 
-export enum SCORE_LABEL {
+export enum SCORE_NAME {
   ALBATROSS = "Albatross",
   EAGLE = "Eagle",
   BIRDIE = "Birdie",
@@ -14,29 +14,29 @@ export enum SCORE_LABEL {
 
 export function formatHoleScore(holeScore: number): HoleScore | string {
   if (holeScore < -3) {
-    return "Hole score must be greater than or equal to -3";
+    throw new Error("Hole score must be greater than or equal to -3");
   }
 
   switch (holeScore) {
     case -3:
-      return { score: holeScore, name: SCORE_LABEL.ALBATROSS };
+      return { score: holeScore, name: SCORE_NAME.ALBATROSS };
     case -2:
-      return { score: holeScore, name: SCORE_LABEL.EAGLE };
+      return { score: holeScore, name: SCORE_NAME.EAGLE };
     case -1:
-      return { score: holeScore, name: SCORE_LABEL.BIRDIE };
+      return { score: holeScore, name: SCORE_NAME.BIRDIE };
     case 0:
-      return { score: holeScore, name: SCORE_LABEL.PAR };
+      return { score: holeScore, name: SCORE_NAME.PAR };
     case 1:
-      return { score: holeScore, name: SCORE_LABEL.BOGEY };
+      return { score: holeScore, name: SCORE_NAME.BOGEY };
     case 2:
-      return { score: holeScore, name: SCORE_LABEL.DOUBLE_BOGEY };
+      return { score: holeScore, name: SCORE_NAME.DOUBLE_BOGEY };
     case 3:
-      return { score: holeScore, name: SCORE_LABEL.TRIPLE_BOGEY };
+      return { score: holeScore, name: SCORE_NAME.TRIPLE_BOGEY };
     case 4:
-      return { score: holeScore, name: SCORE_LABEL.QUADRUPLE_BOGEY };
+      return { score: holeScore, name: SCORE_NAME.QUADRUPLE_BOGEY };
     case 5:
-      return { score: holeScore, name: SCORE_LABEL.QUINTUPLE_BOGEY };
+      return { score: holeScore, name: SCORE_NAME.QUINTUPLE_BOGEY };
     default:
-      return { score: holeScore, name: `+${holeScore.toString()}` };
+      return { score: holeScore, name: `+${holeScore}` };
   }
 }

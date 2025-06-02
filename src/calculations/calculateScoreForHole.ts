@@ -11,20 +11,19 @@ export function calculateScoreForHole({
   totalStroke,
 }: HolePlayInfo): number | string {
   if (par <= minPar) {
-    return "Par must be greater than minPar";
+    throw new Error("Par must be greater than minPar");
   }
 
   if (minPar < 1) {
-    return "MinPar must be greater than 0";
+    throw new Error("MinPar must be greater than 0");
   }
 
   if (totalStroke < minPar) {
-    return "Total stroke must be greater than or equal to minPar";
+    throw new Error("Total stroke must be greater than or equal to minPar");
   }
 
   if (par - minPar > 3) {
-    return "Par can be greater than minPar atmost 3";
+    throw new Error("Par can be greater than minPar at most 3");
   }
-
   return totalStroke - par;
 }

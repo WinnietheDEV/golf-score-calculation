@@ -2,7 +2,7 @@ export function calculateScoreForCourse(
   courseScore: number[]
 ): string | number {
   if (courseScore.length < 1) {
-    return "Course score can't be empty";
+    throw new Error("Course score can't be empty");
   }
 
   let finalScore = 0;
