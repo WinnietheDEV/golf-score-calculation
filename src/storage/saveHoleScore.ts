@@ -1,6 +1,6 @@
 export interface HoleScore {
   score: number;
-  label: string;
+  name: string;
 }
 
 export function saveHoleScore(holeScore: HoleScore, courseScore: HoleScore[]) {

@@ -1,7 +1,7 @@
 import { calculateScoreForCourse } from "../calculateScoreForCourse";
 
 describe("calculateScoreForCourse", () => {
-  it("คืนค่า -3 เมื่อ courseScore เป็น [-3]", () => {
+  it("คืนค่าผลรวมของคะแนนเมื่อมีเพียงหลุมเดียว", () => {
     // Arrange
     const courseScore = [-3];
     const expected = -3;
@@ -11,7 +11,7 @@ describe("calculateScoreForCourse", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า -2 เมื่อ courseScore เป็น [-3,1]", () => {
+  it("คืนค่าผลรวมของคะแนนจากหลายหลุม", () => {
     // Arrange
     const courseScore = [-3, 1];
     const expected = -2;

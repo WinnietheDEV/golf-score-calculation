@@ -1,7 +1,7 @@
 import { calculateScoreForHole } from "../calculateScoreForHole";
 
 describe("calculateScoreForHole", () => {
-  it("คืนค่า -1 เมื่อ par เป็น 3; minPar เป็น 1; totalStroke เป็น 2", () => {
+  it("คืนค่าลบเมื่อผู้เล่นตีได้น้อยกว่า par ของหลุม", () => {
     // Arrange
     const par = 3;
     const minPar = 1;
@@ -13,7 +13,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 2 เมื่อ par เป็น 5; minPar เป็น 2; totalStroke เป็น 7", () => {
+  it("คืนค่าบวกเมื่อผู้เล่นตีเกิน par ของหลุม", () => {
     // Arrange
     const par = 5;
     const minPar = 2;
@@ -25,7 +25,7 @@ describe("calculateScoreForHole", () => {
     expect(result).toBe(expected);
   });
 
-  it("คืนค่า 0 เมื่อ par เป็น 4; minPar เป็น 1; totalStroke เป็น 4", () => {
+  it("คืนค่า 0 เมื่อผู้เล่นตีเท่ากับ par ของหลุม", () => {
     // Arrange
     const par = 4;
     const minPar = 1;
