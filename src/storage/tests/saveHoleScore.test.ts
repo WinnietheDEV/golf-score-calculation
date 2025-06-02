@@ -1,5 +1,5 @@
-import { SCORE_LABEL } from "./formatScore";
-import { HoleScore, saveHoleScore } from "./saveHoleScore";
+import { SCORE_LABEL } from "../../calculations/formatScore";
+import { HoleScore, saveHoleScore } from "../saveHoleScore";
 
 describe("saveHoleScore", () => {
   it("คืนค่า [{score: -3, label: 'Albratross'}] เมื่อ holeScore เป็น {score: -3, label: 'Albatross'; courseScore เป็น []", () => {

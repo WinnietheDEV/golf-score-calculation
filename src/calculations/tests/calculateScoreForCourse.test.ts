@@ -1,4 +1,4 @@
-import { calculateScoreForCourse } from "./calculateScoreForCourse";
+import { calculateScoreForCourse } from "../calculateScoreForCourse";
 
 describe("calculateScoreForCourse", () => {
   it("คืนค่า -3 เมื่อ courseScore เป็น [-3]", () => {

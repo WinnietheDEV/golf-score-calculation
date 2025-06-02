@@ -1,4 +1,4 @@
-import { isAPlayerCompleteCourse } from "./isAPlayerCompleteCourse";
+import { isAPlayerCompleteCourse } from "../isAPlayerCompleteCourse";
 
 describe("isAPlayerCompleteGame", () => {
   it("คืนค่า true เมื่อ holesPlayed เป็น 5; totalholes เป็น 5", () => {

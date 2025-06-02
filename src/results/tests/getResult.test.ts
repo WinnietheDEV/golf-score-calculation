@@ -1,4 +1,4 @@
-import { getResult } from "./getResult";
+import { getResult } from "../getResult";
 
 describe("getResult", () => {
   it("คืนค่า {scoreBoard: [{player:'Win',finalScore: 3}], winners: ['Win']} เมื่อ playersFinalScore เป็น [{player: 'Win', finalScore: 3}]", () => {

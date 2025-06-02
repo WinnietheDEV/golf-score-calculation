@@ -1,6 +1,4 @@
-import { SCORE_LABEL } from "./formatScore";
-import { isEveryPlayerCompleteCourse } from "./isEveryPlayerCompleteCourse";
-import { HoleScore, saveHoleScore } from "./saveHoleScore";
+import { isEveryPlayerCompleteCourse } from "../isEveryPlayerCompleteCourse";
 
 describe("isEveryPlayerCompleteCourse", () => {
   it("คืนค่า true เมื่อ totalPlayers เป็น 5; playersCompletedCourse เป็น 5", () => {

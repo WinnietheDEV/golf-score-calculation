@@ -1,4 +1,4 @@
-import { calculateScoreForHole } from "./calculateScoreForHole";
+import { calculateScoreForHole } from "../calculateScoreForHole";
 
 describe("calculateScoreForHole", () => {
   it("คืนค่า -1 เมื่อ par เป็น 3; minPar เป็น 1; totalStroke เป็น 2", () => {

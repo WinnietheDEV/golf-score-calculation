@@ -1,4 +1,4 @@
-import { HoleScore } from "./saveHoleScore";
+import { HoleScore } from "../storage/saveHoleScore";
 
 export enum SCORE_LABEL {
   ALBATROSS = "Albatross",

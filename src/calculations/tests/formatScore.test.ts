@@ -1,4 +1,4 @@
-import { formatHoleScore, SCORE_LABEL } from "./formatScore";
+import { formatHoleScore, SCORE_LABEL } from "../formatScore";
 
 describe("formatScore", () => {
   it("คืนค่า {score: -3, label: 'Albatross'} เมื่อ holeScore เป็น -3", () => {
