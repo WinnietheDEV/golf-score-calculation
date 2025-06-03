@@ -1,6 +1,4 @@
-export function calculateScoreForCourse(
-  courseScore: number[]
-): string | number {
+export function calculateScoreForCourse(courseScore: number[]): number {
   if (courseScore.length < 1) {
     throw new Error("Course score can't be empty");
   }

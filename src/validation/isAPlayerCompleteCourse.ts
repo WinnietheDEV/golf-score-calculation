@@ -9,7 +9,7 @@ interface PlayerCourseProgress {
 export function isAPlayerCompleteCourse({
   holesPlayed,
   totalHoles,
-}: PlayerCourseProgress): boolean | string {
+}: PlayerCourseProgress): boolean {
   if (holesPlayed > totalHoles) {
     throw new Error("Holes played must be less than or equal to totalHoles");
   }

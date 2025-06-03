@@ -3,6 +3,9 @@ export interface HoleScore {
   name: string;
 }
 
-export function saveHoleScore(holeScore: HoleScore, courseScore: HoleScore[]) {
+export function saveHoleScore(
+  holeScore: HoleScore,
+  courseScore: HoleScore[]
+): HoleScore[] {
   return [...courseScore, holeScore];
 }

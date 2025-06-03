@@ -12,7 +12,7 @@ export enum SCORE_NAME {
   QUINTUPLE_BOGEY = "Quintuple Bogey",
 }
 
-export function formatHoleScore(holeScore: number): HoleScore | string {
+export function formatHoleScore(holeScore: number): HoleScore {
   if (holeScore < -3) {
     throw new Error("Hole score must be greater than or equal to -3");
   }

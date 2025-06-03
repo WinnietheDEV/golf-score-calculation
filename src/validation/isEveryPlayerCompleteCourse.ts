@@ -9,7 +9,7 @@ interface GameProgress {
 export function isEveryPlayerCompleteCourse({
   totalPlayers,
   playersCompletedCourse,
-}: GameProgress) {
+}: GameProgress): boolean {
   if (totalPlayers <= 0) {
     throw new Error("Total players must be greater than 0");
   }
